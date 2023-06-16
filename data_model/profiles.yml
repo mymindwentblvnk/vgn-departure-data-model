@@ -1,0 +1,22 @@
+# https://github.com/RealSelf/dbt-source/blob/development/sample.profiles.yml
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      project: me-playground
+      method: oauth
+      dataset: dev
+      location: EU
+    pp:
+      type: bigquery
+      project: me-playground
+      method: service-account
+      dataset: pre_prod
+      location: EU
+    prod:
+      type: bigquery
+      project: me-playground
+      method: service-account
+      dataset: prod
+      location: EU
